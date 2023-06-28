@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>s21_FinanceWindow</class>
+ <widget class="QWidget" name="s21_FinanceWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>439</width>
+    <height>860</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>439</width>
+    <height>860</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>439</width>
+    <height>860</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>SmartCalc</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QTabWidget" name="ModeTab">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-21</y>
+     <width>439</width>
+     <height>751</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="CreditCalc">
+    <attribute name="title">
+     <string>Tab 1</string>
+    </attribute>
+    <widget class="QLabel" name="CreditCalcLabel">
+     <property name="geometry">
+      <rect>
+       <x>169</x>
+       <y>10</y>
+       <width>101</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>CreditCalc</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="DepositAmount">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>90</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Term">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>140</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DepositAmountLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>96</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Deposit Amount</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TermLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>145</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Term</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="InterestRate">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>190</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="InterestRateLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>195</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Interest rate</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="Annuity">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>270</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Annuity</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="Differentiated">
+     <property name="geometry">
+      <rect>
+       <x>298</x>
+       <y>270</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Differentiated</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="TotalPayout">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>450</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Overpayment">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>400</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="OverpaymentLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>405</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Overpayment</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="MonthlyPaymentLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>356</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Monthly payment</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TotalPayoutLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>455</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Total payout</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="MonthlyPayment">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>350</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Calculate">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>550</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(255, 255, 255);
+	border: 1px solid;
+	border-color: rgb(230, 230, 230);
+	border-radius: 20px;
+}
+
+QPushButton::hover {
+	background-color: rgb(245, 245, 245);
+}</string>
+     </property>
+     <property name="text">
+      <string>Calculate</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Clear">
+     <property name="geometry">
+      <rect>
+       <x>298</x>
+       <y>550</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(255, 255, 255);
+	border: 1px solid;
+	border-color: rgb(230, 230, 230);
+	border-radius: 20px;
+}
+
+QPushButton::hover {
+	background-color: rgb(245, 245, 245);
+}</string>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="DepoCalc">
+    <attribute name="title">
+     <string>Tab 2</string>
+    </attribute>
+    <widget class="QLabel" name="DepositCalcLb">
+     <property name="geometry">
+      <rect>
+       <x>158</x>
+       <y>10</y>
+       <width>121</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>DepositCalc</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="TaxRate">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>225</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TaxRateLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>231</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tax rate</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DepositAmountLb_2">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>76</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Deposit Amount</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="DepositAmount_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>70</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Term_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>120</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TermLb_2">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>125</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Term</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="InterestRate_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>170</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="FrequencyLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>280</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Frequency</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="CapitalizationLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>330</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Capitalization</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="InterestRateLb_2">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>175</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Interest rate</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="TaxAmount">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>470</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="AccuredInterest">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>425</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="AmountByTheEndLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>525</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Amount by the end</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="AccuredInterestLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>430</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Accured interest</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="AmountByTheEnd">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>520</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit{ background: rgb(245, 245, 245);
+selection-background-color: rgb(245, 245, 245);
+border: 1px
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TaxAmountLb">
+     <property name="geometry">
+      <rect>
+       <x>7</x>
+       <y>475</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tax amount</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Clear_2">
+     <property name="geometry">
+      <rect>
+       <x>298</x>
+       <y>620</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(255, 255, 255);
+	border: 1px solid;
+	border-color: rgb(230, 230, 230);
+	border-radius: 20px;
+}
+
+QPushButton::hover {
+	background-color: rgb(245, 245, 245);
+}</string>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Calculate_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>620</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(255, 255, 255);
+	border: 1px solid;
+	border-color: rgb(230, 230, 230);
+	border-radius: 20px;
+}
+
+QPushButton::hover {
+	background-color: rgb(245, 245, 245);
+}</string>
+     </property>
+     <property name="text">
+      <string>Calculate</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="Date">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>280</y>
+       <width>281</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Day</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Week</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Month</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Quarter</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Half a year</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Year</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QCheckBox" name="YesCap">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>330</y>
+       <width>85</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Yes</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="NoCap">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>330</y>
+       <width>85</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>No</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="CREDITCALCMENU">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>770</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+border: 1px solid;
+border-color: rgb(230, 230, 230);
+border-radius: 20px;
+}
+
+QPushButton::hover {
+	background-color: rgb(245, 245, 245);
+}</string>
+   </property>
+   <property name="text">
+    <string>CreditCalc</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="DEPOSITCALCMENU">
+   <property name="geometry">
+    <rect>
+     <x>298</x>
+     <y>770</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: rgb(255, 255, 255);
+	border: 1px solid;
+	border-color: rgb(230, 230, 230);
+	border-radius: 20px;
+}
+
+QPushButton::hover {
+	background-color: rgb(245, 245, 245);
+}</string>
+   </property>
+   <property name="text">
+    <string>DepositCalc</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
